@@ -9,11 +9,10 @@ defineProps({
     required: true,
   },
 });
-const rawHtml = '<a href="">Link</a>';
-const pid = 10;
 </script>
 
 <template>
+  {{ console.log("template 실행") }}
   <div class="greetings">
     <h1 class="green">{{ msg }} {{ msg2 }}</h1>
     <h3>
@@ -22,12 +21,6 @@ const pid = 10;
       <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
     </h3>
     <hr />
-    <p>{{ rawHtml }}</p>
-    <p><span v-html="rawHtml"></span></p>
-    <hr />
-    <h2>속성 바인딩</h2>
-    <div v-bind:id="pid"></div>
-    <div :id="pid"></div>
   </div>
 </template>
 
